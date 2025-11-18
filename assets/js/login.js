@@ -1,5 +1,5 @@
 // Migrated login.js
-let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+let base_url = "http://34.42.80.200/inventory/";
 
 document.getElementById("loginForm").addEventListener("submit", async function (e) {
     e.preventDefault();

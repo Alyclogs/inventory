@@ -71,7 +71,7 @@ $rol = $_SESSION['rol'];
 
     <script>
         lucide.createIcons();
-        let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+        let base_url = "http://34.42.80.200/inventory/";
 
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll(".delete-btn").forEach(btn => {

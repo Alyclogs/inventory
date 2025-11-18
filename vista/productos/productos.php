@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 'admin') {
     exit();
 }
 
-$base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+$base_url = "http://34.42.80.200/inventory/";
 $rol = $_SESSION['rol'];
 $productoModel = new ProductoModel();
 ?>
@@ -228,7 +228,7 @@ $productoModel = new ProductoModel();
     <script>
         lucide.createIcons();
 
-        let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+        let base_url = "http://34.42.80.200/inventory/";
 
         document.addEventListener("DOMContentLoaded", function(e) {
             document.querySelectorAll(".delete-btn").forEach(btn => {

@@ -146,7 +146,7 @@ $stockTotal = $stockModel->getTotalStock();
 
   <script>
     lucide.createIcons();
-    let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+    let base_url = "http://34.42.80.200/inventory/";
 
     let chart1;
     async function cargarMovimientos(validarFechas = false) {

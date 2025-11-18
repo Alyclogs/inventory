@@ -77,7 +77,7 @@ $usuario = $usuarioModel->getById($id);
             preview.src = file ? URL.createObjectURL(file) : preview.src;
         });
 
-        let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+        let base_url = "http://34.42.80.200/inventory/";
 
         const form = document.getElementById("usuarioForm");
         form.addEventListener("submit", (e) => {

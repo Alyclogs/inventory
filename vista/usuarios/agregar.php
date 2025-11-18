@@ -71,7 +71,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 'admin') {
             preview.src = file ? URL.createObjectURL(file) : '../../assets/uploads/default.png';
         });
 
-        let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
+        let base_url = "http://34.42.80.200/inventory/";
 
         const form = document.getElementById("usuarioForm");
         form.addEventListener("submit", (e) => {
