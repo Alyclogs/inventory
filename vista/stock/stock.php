@@ -84,7 +84,7 @@ $productoModel = new ProductoModel();
 
     <script>
         lucide.createIcons();
-        let base_url = "http://localhost/SYSTEM_INVENTORY/";
+        let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
 
         function cargarProductos(categoria) {
             const contenedor = document.getElementById("productosContainer");

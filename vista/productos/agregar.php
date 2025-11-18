@@ -67,7 +67,7 @@ $categorias = $productoModel->getCategorias();
 
     <script>
         lucide.createIcons();
-        let base_url = "http://localhost/SYSTEM_INVENTORY/";
+        let base_url = "http://34.42.80.200/SYSTEM_INVENTORY/";
 
         const input = document.getElementById('fotoInput');
         const preview = document.getElementById('previewImg');
