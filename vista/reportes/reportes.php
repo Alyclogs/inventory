@@ -72,7 +72,7 @@ $stockTotal = $stockModel->getTotalStock();
             <option value="todas">Todas las categorías</option>
             <?php
             $cats = $productoModel->getCategroiasProductos();
-            foreach ($cats as $cat) {
+            foreach ($cats as $c) {
               echo "<option value='{$c['categoria']}'>{$c['categoria']}</option>";
             }
             ?>
@@ -92,7 +92,7 @@ $stockTotal = $stockModel->getTotalStock();
             <option value="todas">Todas las categorías</option>
             <?php
             $cats = $productoModel->getCategroiasProductos();
-            foreach ($cats as $cat) {
+            foreach ($cats as $c) {
               echo "<option value='{$c['categoria']}'>{$c['categoria']}</option>";
             }
             ?>
@@ -112,7 +112,7 @@ $stockTotal = $stockModel->getTotalStock();
             <option value="todas">Todas las categorías</option>
             <?php
             $cats = $productoModel->getCategroiasProductos();
-            foreach ($cats as $cat) {
+            foreach ($cats as $c) {
               echo "<option value='{$c['categoria']}'>{$c['categoria']}</option>";
             }
             ?>
@@ -129,7 +129,7 @@ $stockTotal = $stockModel->getTotalStock();
             <option value="todas">Todas las categorías</option>
             <?php
             $cats = $productoModel->getCategroiasProductos();
-            foreach ($cats as $cat) {
+            foreach ($cats as $c) {
               echo "<option value='{$c['categoria']}'>{$c['categoria']}</option>";
             }
             ?>
