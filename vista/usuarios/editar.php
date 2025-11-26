@@ -86,7 +86,7 @@ $usuario = $usuarioModel->getById($id);
             if (form.checkValidity()) {
                 const formData = new FormData(form);
 
-                fetch(base_url + "controlador/UsuarioController.php?acion=actualizar&id=<?php echo $id; ?>", {
+                fetch(base_url + "controlador/UsuarioController.php?action=actualizar&id=<?php echo $id; ?>", {
                         method: "POST",
                         body: formData
                     })

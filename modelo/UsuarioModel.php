@@ -45,6 +45,7 @@ class UsuarioModel
         $usuario = $conn->real_escape_string($data['usuario']);
         $rol = $conn->real_escape_string($data['rol']);
         $nombre = $conn->real_escape_string($data['nombre']);
+
         $sql = "UPDATE usuarios SET usuario='$usuario', rol='$rol', nombre_completo='$nombre' WHERE id=$id";
         if (!empty($data['clave'])) {
             $clave = md5($data['clave']);

@@ -28,12 +28,30 @@ class StockModel
         return $data;
     }
 
-    public static function actualizarStock($id, $cantidad)
+    public static function actualizarStock($id, $data)
     {
         global $conn;
-        $id = intval($id);
-        $cantidad = intval($cantidad);
-        return $conn->query("UPDATE productos SET stock = $cantidad WHERE id = $id");
+
+        $producto_id = $data['producto_id'];
+        $tipo = $data['tipo'];
+        $cantidad = intval($data['cantidad']);
+        $observacion = $data['observacion'] ?? "";
+
+        $res = $conn->query("SELECT stock FROM productos WHERE id = $producto_id");
+        $row = $res->fetch_assoc();
+        $stockActual = intval($row['stock']);
+
+        if ($tipo === "Entrada") {
+            $nuevoStock = $stockActual + $cantidad;
+        } else {
+            $nuevoStock = max(0, $stockActual - $cantidad);
+        }
+
+        $conn->query("UPDATE productos SET stock = $nuevoStock WHERE id = $producto_id");
+
+        $stmt = $conn->prepare("INSERT INTO movimientos (producto_id, tipo, cantidad, observacion) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("isis", $producto_id, $tipo, $cantidad, $observacion);
+        return $stmt->execute();
     }
 
     public static function getTotalStock()

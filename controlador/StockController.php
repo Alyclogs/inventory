@@ -30,8 +30,14 @@ try {
                 if (!isset($_POST['producto_id'])) {
                     throw new Exception("ID de producto requerido");
                 }
+                if (!isset($_POST['cantidad']) || !is_numeric($_POST['cantidad'])) {
+                    throw new Exception("Cantidad requerida");
+                }
+                if (!isset($_POST['tipo'])) {
+                    throw new Exception("Tipo de movimiento requerido (Entrada/Salida)");
+                }
 
-                $stockModel->actualizarStock($_POST['producto_id'], $_POST['cantidad'] ?? 0);
+                $stockModel->actualizarStock($_POST['producto_id'], $_POST);
 
                 $response = [
                     "success" => true,
